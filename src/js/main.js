@@ -5,6 +5,7 @@
 @@include('webpcheck.js');
 
 $(document).ready(function () {
+	const btnCallback = $('.btn-callback-js');
 	const btnFeedback = $('.btn-main-js');
 	const popupContainerCallback = $('.popup-container-callback-js');
 	const popupContainerFeedback = $('.popup-container-feedback-js');
