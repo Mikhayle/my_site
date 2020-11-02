@@ -1,0 +1,142 @@
+.header
+    background-color: $bg-grey
+
+    &__container
+        display: flex
+        align-items: center
+        padding-top: 30px !important
+        @media screen and ( max-width: 576px )
+            padding-top: 25px !important
+                
+    &__menu
+        &.active               
+            transform: translateX(100%)  
+            transition: transform 0.4s ease-in            
+        @media screen and ( max-width: 1024px )            
+            position: fixed
+            left: -100%
+            top: 0
+            width: 100%
+            height: 100%
+            background-color: #fff
+            z-index: 19  
+            transition: all 0.4s ease-out          
+    &__list 
+        display: flex
+        @media screen and ( max-width: 1024px )
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            height: 100%
+    &__list-item
+        transition: transform 0.2s ease-out
+        &:not(:last-child)
+            margin-right: 35px
+            @media screen and ( max-width: 1024px )
+                margin-right: 0
+        &:hover
+            transform: translateY(5px)
+            transition: transform 0.2s ease-in
+        @media screen and ( max-width: 1024px )
+            margin-bottom: 50px
+
+    &__link
+        font-size: 16px
+        color: $main-color  
+        @media screen and ( max-width: 1024px )
+            font-size: 24px      
+    &__link_pink
+        color: $pink
+    &__contact
+        display: flex
+        align-items: center
+        margin-left: auto  
+    
+    &__phone-link
+        color: $main-color
+        font-size: 25px
+        font-weight: 700       
+        line-height: 54px
+        margin-right: 35px
+        transition: transform 0.2s ease-out
+        &:hover
+            transform: scale(1.05)
+            transition: transform 0.2s ease-in   
+        @media screen and ( max-width: 576px )
+            font-size: 20px
+    @media screen and ( max-width: 1024px )
+        &__burger 
+            display: block
+            position: relative
+            width: 45px
+            height: 32px
+            z-index: 20
+            border: none
+            background-color: transparent
+        &__burger span 
+            width: 100%
+            height: 4px
+            position: absolute
+            left: 0
+            top: 14px
+            background: $gradient           
+        &__burger:before,
+        &__burger:after 
+            content: ''
+            position: absolute
+            left: 0
+            width: 100%
+            height: 4px
+            background: $gradient
+            -webkit-transition: 0.3s
+            -moz-transition: 0.3s
+            -ms-transition: 0.3s
+            -o-transition: 0.3s
+            transition: all 0.3s ease-out
+        &__burger:before 
+            top: 0
+        &__burger:after 
+            bottom: 0
+        &__burger.active:before 
+            transform: rotate(45deg)
+            top: 13px
+            -webkit-transition: 0.3s
+            -moz-transition: 0.3s
+            -ms-transition: 0.3s
+            -o-transition: 0.3s
+            transition: all 0.3s ease-in  
+        &__burger.active:after 
+            transform: rotate(-45deg)
+            bottom: 14px
+            transition: all 0.3s ease-in
+        &__burger.active > span 
+            transform: scale(0)
+    @media screen and ( max-width: 768px )
+        & .btn-callback
+            width: 26px
+            height: 26px
+            border-radius: 50%
+            border: none
+            background-image: url('../img/call_back_button.png')
+            background-repeat: no-repeat
+        & .btn-callback span
+            display: none  
+    @media screen and ( max-width: 768px )
+        &__burger
+            width: 24px
+            height: 18px
+        &__burger span,
+        &__burger:before,
+        &__burger:after             
+            height: 2px
+        &__burger.active:before,
+        &__burger.active:after             
+            top: 8px
+        &__burger span
+            top: 8px
+        &__phone
+            font-size: 18px
+         
+        
+    
+

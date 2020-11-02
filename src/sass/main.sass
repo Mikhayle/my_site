@@ -1,0 +1,99 @@
+@import _fonts.sass
+@import _normalize.scss
+@import _swiper.min.scss
+@import _variables.sass
+
+
+    
+*
+    margin: 0
+    padding: 0
+    &:active        
+        outline: none
+    &:focus
+        outline: none
+    &:focus-visible               
+        outline: 2px solid black
+
+ul
+    list-style: none
+
+a
+    text-decoration: none
+
+button     
+    cursor: pointer
+    
+
+body
+    font-family: "Roboto-Regular", sans-serif
+    color: $main-color
+
+html
+    scroll-behavior: smooth
+
+h1, h2, h3 
+    display: inline
+    margin: 0
+    padding: 0
+
+.container
+    max-width: 1175px
+    margin: 0 auto
+    padding: 0 25px
+    @media screen and ( max-width: 1024px )
+        padding: 0 40px
+    @media screen and ( max-width: 576px )
+        padding: 0 20px
+
+.btn-callback    
+    width: 207px
+    height: 45px
+    background-color: inherit
+    border: 1px solid $pink
+    color: #f53f4f
+    font-size: 16px
+    transition: background-color 0.3s ease-out, color 0.3s ease-out, border 0.3s ease-out
+    &:hover
+        background-color: $raspberry
+        color: $white
+        border: none
+        transition: background-color 0.3s ease-in, color 0.3s ease-in, border 0.3s ease-in
+    &:active
+        box-shadow: 0 0 10px #fff inset
+    
+
+.btn-main 
+    width: 270px
+    height: 60px
+    background-color: $orange
+    font-size: 18px
+    color: $white
+    border: none
+    transition: background-color 0.3s ease-out, color 0.3s ease-out, border 0.3s ease-out
+    &:hover
+        background-color: $white
+        color: $orange
+        border: 1px solid $orange
+        transition: background-color 0.3s ease-in, color 0.3s ease-in, border 0.3s ease-in
+    &:active
+        box-shadow: 0 0 10px $lightorange inset
+
+.title
+    color: $title-color
+    font-size: 54px
+    font-weight: 700
+    letter-spacing: -1.5px
+    @media screen and ( max-width: 576px )
+            font-size: 30px
+    
+@import _birds.sass
+@import _popup.sass
+@import _header.sass
+@import _hero.sass
+@import _skills.sass
+@import _portfolio.sass
+@import _price.sass
+@import _footer.sass
+
+    

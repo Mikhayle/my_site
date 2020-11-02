@@ -1,0 +1,65 @@
+<div class="popup-container popup-container-callback-js">
+    <div class="popup popup_callback">
+        <div class="popup__header">
+          <h5 class="popup__title">Заказать обратный звонок</h5>
+          <button type="button" class="popup__close">
+            <span>&times;</span>
+          </button>
+        </div>
+        <form id="callback-form" class="popup__form popup__form-js" action="telegram.php" method="POST">
+            <div class="popup__body">                
+                    <label for="cb_user_name">Ваше Имя</label>
+                    <input class="popup__input" type="text" required name="user_name" id="cb_user_name">
+                    <label for="cb_user_phone">Номер телефона</label>
+                    <input class="popup__input popup__input-phone" type="text" required name="user_phone" id="cb_user_phone" maxlength="14" placeholder="(***)***-****">                
+            </div>
+
+            <div class="popup__footer">       
+                <button type="submit" class="popup__btn">Отправить</button>
+            </div>
+        </form>
+          <div class="popup__after">
+            <h5 class="modal-title">Спасибо, я свяжусь с Вами в ближайшее время!</h5>
+            <button class="popup__btn btn_after-js">Закрыть</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-container popup-container-feedback-js">
+    <div class="popup popup_feedback">
+
+        <div class="popup__header">
+          <h5 class="popup__title">Обратная связь</h5>
+          <button type="button" class="popup__close">
+            <span>&times;</span>
+          </button>
+        </div>
+        <form id="feedback-form" class="popup__form popup__form-js" action="telegram.php" method="POST">
+            <div class="popup__body">                
+              <label for="fb_user_name">Ваше Имя</label>
+              <input class="popup__input" type="text" required name="user_name" id="fb_user_name">
+              <label for="fb_user_phone">Номер телефона</label>
+              <input class="popup__input popup__input-phone" type="tel" required minlength="6" name="user_phone" id="fb_user_phone" maxlength="14" placeholder="(***)***-****">
+              <div class="popup__type-connect">Предпочитаемый вид связи</div><br>
+              <div class="popup__input-connect">                  
+                <input id="phone-connect" type="checkbox" name="type-of-connect" value="По телефону">
+                <label for="phone-connect">Звонок</label>
+            
+                <input id="email-connect" type="checkbox" name="type-of-connect" value="По электронной почте">
+                <label for="email-connect">E-mail</label>                  
+              </div>
+              <label for="comment">Комментарий</label>
+              <textarea class="popup__input popup__input-comment" required name="user_comments" id="comment" cols="30" rows="10"></textarea>                
+            </div>
+
+            <div class="popup__footer">       
+                <button type="submit" class="popup__btn">Отправить</button>
+            </div>
+        </form>
+          <div class="popup__after">
+            <h5 class="modal-title">Спасибо, я свяжусь с Вами в ближайшее время!</h5>
+            <button class="popup__btn btn_after-js">Закрыть</button>
+        </div>
+    </div>
+</div>

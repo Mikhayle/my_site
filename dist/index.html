@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Александр Михайлё, frontend developer</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/main.min.css">
+	
+</head>
+<body>
+
+	<div class="popup-container popup-container-callback-js">
+    <div class="popup popup_callback">
+        <div class="popup__header">
+          <h5 class="popup__title">Заказать обратный звонок</h5>
+          <button type="button" class="popup__close">
+            <span>&times;</span>
+          </button>
+        </div>
+        <form id="callback-form" class="popup__form popup__form-js" action="telegram.php" method="POST">
+            <div class="popup__body">                
+                    <label for="cb_user_name">Ваше Имя</label>
+                    <input class="popup__input" type="text" required name="user_name" id="cb_user_name">
+                    <label for="cb_user_phone">Номер телефона</label>
+                    <input class="popup__input popup__input-phone" type="text" required name="user_phone" id="cb_user_phone" maxlength="14" placeholder="(***)***-****">                
+            </div>
+
+            <div class="popup__footer">       
+                <button type="submit" class="popup__btn">Отправить</button>
+            </div>
+        </form>
+          <div class="popup__after">
+            <h5 class="modal-title">Спасибо, я свяжусь с Вами в ближайшее время!</h5>
+            <button class="popup__btn btn_after-js">Закрыть</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-container popup-container-feedback-js">
+    <div class="popup popup_feedback">
+
+        <div class="popup__header">
+          <h5 class="popup__title">Обратная связь</h5>
+          <button type="button" class="popup__close">
+            <span>&times;</span>
+          </button>
+        </div>
+        <form id="feedback-form" class="popup__form popup__form-js" action="telegram.php" method="POST">
+            <div class="popup__body">                
+              <label for="fb_user_name">Ваше Имя</label>
+              <input class="popup__input" type="text" required name="user_name" id="fb_user_name">
+              <label for="fb_user_phone">Номер телефона</label>
+              <input class="popup__input popup__input-phone" type="tel" required minlength="6" name="user_phone" id="fb_user_phone" maxlength="14" placeholder="(***)***-****">
+              <div class="popup__type-connect">Предпочитаемый вид связи</div><br>
+              <div class="popup__input-connect">                  
+                <input id="phone-connect" type="checkbox" name="type-of-connect" value="По телефону">
+                <label for="phone-connect">Звонок</label>
+            
+                <input id="email-connect" type="checkbox" name="type-of-connect" value="По электронной почте">
+                <label for="email-connect">E-mail</label>                  
+              </div>
+              <label for="comment">Комментарий</label>
+              <textarea class="popup__input popup__input-comment" required name="user_comments" id="comment" cols="30" rows="10"></textarea>                
+            </div>
+
+            <div class="popup__footer">       
+                <button type="submit" class="popup__btn">Отправить</button>
+            </div>
+        </form>
+          <div class="popup__after">
+            <h5 class="modal-title">Спасибо, я свяжусь с Вами в ближайшее время!</h5>
+            <button class="popup__btn btn_after-js">Закрыть</button>
+        </div>
+    </div>
+</div>
+	<header class="header">
+    <div class="container header__container">
+        <button class="header__burger">
+            <span></span>
+        </button>
+        <nav class="header__menu menu">
+            <ul class="header__list">
+                <li class="header__list-item">
+                    <a href="#skills" class="header__link">Услуги</a>
+                </li>
+                <li class="header__list-item">
+                    <a href="#portfolio" class="header__link header__link_pink">Портфолио</a>
+                </li>
+                <li class="header__list-item">
+                    <a href="#price" class="header__link">Стоимость</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__contact">            
+            <a href="tel:+79110349728" class="header__phone-link">
+                +7 (911) 034-97-28
+            </a>           
+            <button class="btn-callback btn-callback-js">
+                <span>Заказать звонок</span>   
+            </button>
+        </div>
+    </div>
+</header>
+	
+	<main class="main">
+		<section class="hero">
+    <!-- картинка фона -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="814" height="630" viewBox="0 0 814 630" class="hero__bg-figure">
+        <defs>
+            <linearGradient id="whcea" x1="371.97" x2="548.51" y1="763.68" y2=".74" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#ff8f5a"/>
+                <stop offset=".99" stop-color="#ff2f96"/>
+                <stop offset="1" stop-color="#ff2f96"/>
+            </linearGradient>
+        </defs>
+        <g>
+            <g clip-path="url(#clip-2)">
+                <path fill="#6055c4" d="M395.52 40.407C502.261-10.05 602.994-10.204 687.212 27.67c84.435 37.567 152.356 113.165 198.491 207.114 44.27 94.884 44.223 196.799 8.068 279.242-36.656 83.673-97.666 146.755-180.805 191.777-44.03 22.669-90.312 38.198-149.148 47.731-58.06 9.394-128.676 12.79-203.493 7.944-148.474-9.32-314.876-53.081-349.967-151.79-19.887-49.012-7.404-105.197 17.32-161.739 25.13-56.624 62.503-113.604 101.74-166.115 39.645-52.593 81.155-100.717 123.891-141.53C296.45 99.41  340.817 65.828 395.52 40.408z"/>
+                <path fill="url(#whcea)" d="M395.52 40.407C502.261-10.05 602.994-10.204 687.212 27.67c84.435 37.567 152.356 113.165 198.491 207.114 44.27 94.884 44.223 196.799 8.068 279.242-36.656 83.673-97.666 146.755-180.805 191.777-44.03 22.669-90.312 38.198-149.148 47.731-58.06 9.394-128.676 12.79-203.493 7.944-148.474-9.32-314.876-53.081-349.967-151.79-19.887-49.012-7.404-105.197 17.32-161.739 25.13-56.624 62.503-113.604 101.74-166.115 39.645-52.593 81.155-100.717 123.891-141.53C296.45 99.41 340.817 65.828 395.52 40.408z"/>
+            </g>
+        </g>
+    </svg>
+    <!-- конец картинки фона -->
+    <!-- вылетающие символы -->
+<div class="birds birds_heading birds__bird1 birds__bird1_heading">{&nbsp;}</div>
+<div class="birds birds_heading birds__bird2 birds__bird2_heading">&lt;div&gt;</div>	
+<div class="birds birds_heading birds__bird3 birds__bird3_heading">#</div>
+<div class="birds birds_heading birds__bird4 birds__bird4_heading">&lt;div&gt;</div>
+<div class="birds birds_heading birds__bird5 birds__bird5_heading">&lt;/&gt;</div>
+    <div class="container hero__container">
+        <div class="hero__content">
+            <h1 class="hero__title">
+                Александр Михайлё
+                <span class="hero__subtitle">
+                Frontend-разработчик и веб-верстальщик
+            </span>
+            </h1>
+            <button class="btn-main btn-main-js">
+                Узнать больше
+            </button>
+        </div>
+        <div class="hero__foto">
+            <picture class="hero__picture">
+                <source srcset="img/i-foto-320.png" media="(max-width: 576px)">
+                <img src="img/i-foto.png" alt="Александр Михайлё">
+            </picture>
+        </div>
+    </div>
+</section>
+		<section class="skills" id="skills">
+    <div class="container skills__container">
+        <h2 class="title skills__title">
+            Что я делаю
+        </h2>
+        <ul class="skills__content">
+            <li class="item-skills">
+                <div class="item-skills__icon">
+                    <picture>
+                        <source srcset="img/work-pic-1_320.png" media="(max-width: 768px)">
+                        <img src="img/work-pic.png" alt="Вёрстка">
+                    </picture>
+                </div>
+                <div class="item-skills__text">
+                    Вёрстка лендинг–страниц <br>
+                    и сайтов любой сложности
+                </div>
+            </li>
+            <li class="item-skills">
+                <div class="item-skills__icon">
+                    <picture>
+                        <source srcset="img/work-pic-2_320.png" media="(max-width: 768px)">
+                        <img src="img/work-pic-2.png" alt="Адаптивная вёрстка">
+                    </picture>
+                </div>
+                <div class="item-skills__text">
+                    Адаптивная вёрстка под все
+                    браузеры и устройства
+                </div>
+            </li>
+            <li class="item-skills">
+                <div class="item-skills__icon">
+                    <picture>
+                        <source srcset="img/work-pic-3_320.png" media="(max-width: 768px)">
+                        <img src="img/work-pic-3.png" alt="разработка">
+                    </picture>
+                </div>
+                <div class="item-skills__text">
+                    Frontend–разработка <br>
+                    и программирование
+                </div>
+            </li>
+            <li class="item-skills">
+                <div class="item-skills__icon">
+                    <picture>
+                        <source srcset="img/work-pic-4_320.png" media="(max-width: 768px)">
+                        <img src="img/work-pic-4.png" alt="Исправление">
+                    </picture>
+                </div>
+                <div class="item-skills__text">
+                    Исправление и доработка
+                    существующей вёрстки
+                </div>
+            </li>
+        </ul>
+        <button class="btn-main btn-main_skills btn-main-js">
+            Узнать стоимость
+        </button>
+    </div>
+</section>
+		<section class="portfolio" id="portfolio">
+    <div class="container portfolio__container">
+        <h2 class="title portfolio__title">
+            Примеры моих работ
+        </h2>
+        
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="http://ekproduction.ru" target="_blank">
+                        <picture>
+                            <source media="(max-width: 576px)" srcset="img/korzh-site-320.png">
+                            <img src="img/korzh-site.png" alt="Сайт видеографа Евгения Коржавина" class="slider__picture">                            
+                        </picture>
+                        <div class="slider__text">
+                            Сайт видеографа Евгения Коржавина<br>  
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://github.com/Mikhayle/genesisgroup" target="_blank">
+                        <picture>
+                            <source media="(max-width: 576px)" srcset="img/genesisgroup-320.png">
+                            <img src="img/genesisgroup.png" alt="Сайт для IT компании Genesis Group" class="slider__picture">                            
+                        </picture>
+                        <div class="slider__text">
+                            Landing Page для IT компании Genesis Group (github репозиторий)
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://github.com/Mikhayle/Drharness" target="_blank">
+                        <picture>
+                            <source media="(max-width: 576px)" srcset="img/dr-harness-320.png">
+                            <img src="img/dr-harness.png" alt="Верстка страницы для продажи портупей Dr. Harness" class="slider__picture">                            
+                        </picture>
+                        <div class="slider__text">
+                            Верстка портупей Dr. Harness (github репозиторий)
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>	
+            <!-- add buttons -->
+            			   
+        </div>
+        <button class="slider__arrow slider__arrow_right"><img src="img/arrow_right.png" alt="влево" class="slider__image"></button>    
+            <button class="slider__arrow slider__arrow_left"><img src="img/arrow_left.png" alt="влево" class="slidre__image"></button>
+        <button class="btn-main portfolio__btn-main btn-main-js">
+            Заказать проект
+        </button>
+    </div>
+</section>
+		<section class="price" id="price">
+    <div class="birds birds_price birds__bird1 birds__bird1_price">{&nbsp;}</div>
+<div class="birds birds_price birds__bird2 birds__bird2_price">&lt;div&gt;</div>	
+<div class="birds birds_price birds__bird3 birds__bird3_price">#</div>
+<div class="birds birds_price birds__bird4 birds__bird4_price">&lt;div&gt;</div>
+<div class="birds birds_price birds__bird5 birds__bird5_price">{ }</div>
+    <div class="container price__container">
+        <h2 class="price__text">
+            Адаптивная вёрстка под все устройства<br>
+            и браузеры от 1000 рублей всего за 4 часа. <span>*</span>
+        </h2>
+        <p class="price__subtext">
+            <span>*</span> Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально,
+            в зависимости от сложности задач.
+        </p>
+    </div>
+</section>		
+	</main>
+	<footer class="footer">
+   <div class="container footer__container">
+    <nav class="footer__menu">
+        <ul class="footer__nav-list nav-list">
+            <li class="footer__list-item">
+                <a href="#skills" class="footer__nav-link">Услуги</a>
+            </li>
+            <li class="footer__list-item">
+                <a href="#portfolio" class="footer__nav-link">Портфолио</a>
+            </li>
+            <li class="footer__list-item">
+                <a href="#price" class="footer__nav-link">Стоимость</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="footer__contacts">
+        <div class="phone footer__phone">
+            
+            <a href="tel:+79110349728" class="footer__phone-link">
+                +7 (911) 034-97-28
+            </a>
+        </div>
+        <div class="email">
+            <a href="mailto:info@alexmiko.ru" class="footer__email-link">
+                info@alexmiko.ru
+            </a>
+        </div>
+    </div>
+    <div class="footer__other-contacts">
+        <button class="btn-callback footer__btn-callback btn-callback-js">
+            Заказать звонок
+        </button>
+        <div class="footer__socail-media">
+            <ul class="footer__sm-list">
+                <li class="footer__sm-list-item">
+                    <a href="https://vk.com/mikhaylyo" target="_blank" class="footer__sm-link footer__vk">                        
+                    </a>
+                </li>
+                <li class="footer__sm-list-item">
+                    <a href="https://www.facebook.com/profile.php?id=100006789346859" target="_blank" class="footer__sm-link footer__fb">                        
+                    </a>
+                </li>
+                <li class="footer__sm-list-item">
+                    <a href="#" target="_blank" class="footer__sm-link footer__twitter">                       
+                    </a>
+                </li>
+                <li class="footer__sm-list-item">
+                    <a href="https://www.instagram.com/amiko12/" target="_blank" class="footer__sm-link footer__insta">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   </div>
+</footer>
+<div class="underfooter">
+    <p class="underfooter__text">
+        © Михайлё Александр, 2020
+    </p>
+</div>
+	
+	
+	
+	<script src="js/main.min.js"></script>
+
+	
+
+	<!-- Initialize Swiper -->
+	<script>
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		slidesPerGroup: 1,
+		loop: true,
+		
+		pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		},
+		navigation: {
+		nextEl: '.slider__arrow_right',
+		prevEl: '.slider__arrow_left',
+		},
+		breakpoints: {
+			850: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			},
+
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			}
+		},
+		
+	});
+
+	
+	</script>
+</body>
+
+</html>

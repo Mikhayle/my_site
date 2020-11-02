@@ -1,0 +1,455 @@
+.birds 
+	font-weight: 700
+	position: absolute
+	z-index: 19    
+	animation: bird 1s ease-in-out
+    fill-mode: forwards
+
+
+.birds_heading  
+	background-image: linear-gradient(to top, #f26522 20%, #fa0891 100%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent	
+
+
+.birds_price 
+	color: white
+
+
+.birds__bird1 
+	font-size: 43px
+	transform: rotate(25deg)	
+
+
+.birds__bird1_heading 
+	animation-name: bird1
+
+
+@keyframes bird1 
+    0% 
+        top: 340px
+        left: 740px
+
+    100% 
+        top: 55px
+        left: 130px
+  
+
+.birds__bird1_price 
+	animation-name: birdprice1
+
+
+@keyframes birdprice1 
+    0% 
+        top: 0px
+        left: 0px
+  
+    100% 
+        top: 65px
+        left: 128px
+  
+
+
+.birds__bird2 
+	font-size: 29px
+	transform: rotate(-10deg)	
+
+
+.birds__bird2_heading 
+	animation-name: bird2
+
+
+@keyframes bird2 
+    0% 
+        top: 340px
+        left: 740px
+    
+    100% 
+        top: 85px
+        left: 790px
+  
+
+
+.birds__bird2_price 
+	animation-name: birdprice2
+
+
+@keyframes birdprice2 
+    0% 
+        top: 0px
+        left: 0px
+    
+    100% 
+        top: 81px
+        right: 208px
+  
+
+
+.birds__bird3 
+	font-size: 55px
+	transform: rotate(12deg)	
+
+
+.birds__bird3_heading 
+	animation-name: bird3
+
+
+@keyframes bird3 
+    0% 
+        top: 340px
+        left: 740px
+        
+    100% 
+        top: 281px
+        left: 245px
+  
+
+
+.birds__bird3_price 
+	animation-name: birdprice3
+
+
+@keyframes birdprice3 
+    0% 
+        top: 0px
+            left: 0px
+    
+    100% 
+        top: 260px
+        left: 246px
+  
+.birds__bird4 
+	font-size: 35px
+	transform: rotate(20deg)
+
+
+.birds__bird4_heading 
+	animation-name: bird4
+
+
+@keyframes bird4 
+    0% 
+        top: 340px
+        left: 740px
+    
+    100% 
+        top: 469px
+        left: 948px
+ 
+
+
+.birds__bird4_price 
+	animation-name: birdprice4
+
+
+@keyframes birdprice4 
+    0% 
+        top: 0px
+        left: 0px
+    
+    100% 
+        top: 305px
+        right: 412px
+  
+
+
+.birds__bird5 
+	font-size: 38px
+	transform: rotate(-25deg)
+
+
+.birds__bird5_heading 
+	animation-name: bird5
+
+
+@keyframes bird5 
+    0% 
+        top: 340px
+        left: 740px
+    
+    100% 
+        top: 589px
+        left: 381px
+  
+
+
+.birds__bird5_price 
+	animation-name: birdprice5
+
+
+@keyframes birdprice5 
+    0% 
+        top: 0px
+        left: 0px
+        
+    100% 
+        top: 262px
+        right: 109px
+  
+@media screen and (max-width: 1810px) 
+	
+    @keyframes bird1 
+        0% 
+            top: 340px
+            left: 740px
+
+        100% 
+            top: 78px
+            left: 77px
+
+
+    @keyframes bird2 
+        0% 
+            top: 340px
+            left: 740px
+
+        100% 
+            top: 72px
+            left: 888px
+
+
+    @keyframes bird3 
+        0% 
+            top: 340px
+            left: 740px
+
+        100% 
+            top: 558px
+            left: 58px
+
+
+    @keyframes bird4 
+        0% 
+            top: 340px
+            left: 740px
+
+        100% 
+            top: 507px
+            left: 361px
+
+
+    @keyframes bird5 
+        0% 
+            top: 340px
+            left: 740px
+
+        100% 
+            top: 159px
+            left: 423px
+
+@media screen and (max-width: 1520px) 
+
+    @keyframes birdprice3 
+        0% 
+            top: 0px
+            left: 0px
+
+        100% 
+            top: 260px
+            left: 150px
+
+@media screen and (max-width: 1340px) 
+
+    @keyframes birdprice1 
+        0% 
+            top: 0px
+            left: 0px
+
+        100% 
+            top: 65px
+            left: 28px
+
+
+    @keyframes birdprice2 
+        0% 
+            top: 0px
+            left: 0px
+
+        100% 
+            top: 81px
+            right: 108px    
+
+    @keyframes birdprice3 
+        0% 
+            top: 0px
+            left: 0px
+
+        100% 
+            top: 260px
+            left: 50px
+
+@media screen and (max-width: 1150px) 
+
+    @keyframes birdprice1 
+        0%
+            top: 0px
+            left: 0 
+        100% 
+            top: 24px
+            left: 155px 
+    @keyframes birdprice3 
+        0% 
+            top: 0px
+            left: 0px	    
+        100% 
+            top: 292px
+            right: 93px
+    @keyframes birdprice4 
+        0% 
+            top: 0px
+            left: 0px	    
+        100% 
+            top: 306px
+            right: 453px
+
+
+    .birds__bird2_price 
+        display: none
+
+    .birds__bird5_price 
+        display: none
+
+    .birds__bird1_price 
+        font-size: 29px
+
+    .birds__bird4_price 
+        font-size: 23px	
+
+    .birds__bird3_price 
+        font-size: 38px
+
+@media screen and (max-width: 960px) 
+    .birds__bird2 
+        display: none
+
+    @keyframes bird4 
+        0% 
+            top: 340px
+            left: 740px  
+        100% 
+            top: 72px
+            left: 750px
+
+@media screen and (max-width: 915px) 
+	.birds__bird3_price 
+		display: none
+	.birds__bird4_price 
+		display: none
+
+@media screen and (max-width: 865px)
+    .birds__bird5 
+        display: none
+
+@media screen and (max-width: 845px) 
+	@keyframes bird4 
+        0% 
+            top: 340px
+            left: 740px        
+        100% 
+            top: 72px
+            left: 400px
+
+@media screen and ( max-width: 768px )
+    @keyframes bird1
+        0%
+            top: 340px
+            left: 740px
+        100%
+            top: 27px
+            left: 77px
+	
+    @keyframes bird3 
+        0% 
+            top: 340px
+            left: 740px	  
+        100% 
+            top: 240px
+            left: 310px	
+
+              	
+
+@media screen and ( max-width: 720px )
+    @keyframes bird4 
+        0% 
+            top: 340px
+            left: 740px        
+        100% 
+            top: 72px
+            left: 370px
+    
+
+@media screen and (max-width: 635px) 	
+	
+    @keyframes bird3 
+        0% 
+            top: 340px
+            left: 740px  
+        100% 
+            top: 276px
+            left: 48px    
+
+@media screen and (max-width: 520px)
+    .birds_heading 
+        background-image: linear-gradient(to top, #fff 20%, #fa0891 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+@media screen and (max-width: 490px) 
+	@keyframes bird4 
+        0% 
+            top: 340px
+            left: 740px  
+        100% 
+            top: 72px
+            left: 300px
+
+@media screen and (max-width: 400px) 
+    .birds_heading  
+        background-image: linear-gradient(to top left, #f26522 30%, #fa0891 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+    .birds__bird1 
+        font-size: 22px	
+
+    .birds__bird3 
+        font-size: 28px
+
+    .birds__bird4 
+        font-size: 14px	
+
+    .birds__bird5 
+        font-size: 16px
+        display: block	
+
+    @keyframes bird1 
+        0% 
+            top: 340px
+            left: 740px	  
+        100% 
+            top: 19px
+            left: 49px	  
+
+    @keyframes bird3 
+        0% 
+            top: 340px
+            left: 740px        
+        100% 
+            top: 129px
+            left: 37px	  
+
+    @keyframes bird4 
+        0% 
+            top: 340px
+            left: 740px        
+        100% 
+            top: 34px
+            left: 247px	 
+
+    @keyframes bird5 
+        0% 
+            top: 340px
+            left: 740px            
+        100% 
+            top: 4px
+            left: 175px

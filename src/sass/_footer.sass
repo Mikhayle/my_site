@@ -1,0 +1,114 @@
+.footer
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        min-height: 261px
+        flex-wrap: wrap
+        @media screen and ( max-width: 768px )
+            padding: 50px 40px
+        @media screen and ( max-width: 576px )
+            padding: 50px 20px
+        @media screen and ( max-width: 440px )
+            flex-direction: column
+            align-items: start
+            
+    &__list-item
+        transition: transform 0.2s ease-out
+        &:hover
+            transform: translateX(5px)
+            transition: transform 0.2s ease-in
+    &__list-item:not(last-child)        
+        margin-bottom: 15px        
+    &__nav-link
+        font-size: 18px
+        color: $grey
+        
+    &__contacts
+        margin-left: 51px
+        @media screen and ( max-width: 440px )
+            margin-left: 0
+            margin-top: 50px
+            margin-bottom: 25px
+    &__phone
+        margin-bottom: 28px    
+    &__email-link, &__phone-link
+        font-size: 25px
+        color: #000000
+        @media screen and ( max-width: 840px )
+            font-size: 20px
+            color: $grey            
+    &__phone-link::before,
+    &__email-link::before   
+        margin-right: 20px               
+        font-family: "fontello"
+        background: linear-gradient(13deg, $orange 0%, $raspberry 99%, $raspberry 100%)
+        background-clip: border-box
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+    &__phone-link::before
+        content: "\E801"
+    &__email-link::before
+        content: "\E800"        
+    &__other-contacts
+        margin-right: 20px
+        @media screen and ( max-width: 768px )
+            margin: 0 auto
+        @media screen and ( max-width: 440px )
+            margin: 0
+    &__btn-callback
+        width: 250px
+        margin-bottom: 35px
+        @media screen and ( max-width: 440px )
+            margin-bottom: 50px
+            width: 280px
+            height: 55px
+            background-color: $orange
+            color: $white
+            
+    &__sm-list
+        display: flex
+    &__sm-list-item        
+        margin-right: 30px
+    &__sm-link
+        display: block        
+        background-image: url('../img/sprite.png')
+        background-repeat: no-repeat
+        transition: all 0.2s ease-out
+        &:hover
+            box-shadow: 0 0 $grey
+            transition: all 0.2s ease-in
+    &__vk
+        width: 35px
+        height: 29px     
+        background-position: 0 -4px
+    &__fb
+        width: 16px
+        height: 29px
+        background-repeat: no-repeat
+        background-position: -65px 1px
+    &__twitter
+        width: 29px
+        height: 25px
+        background-repeat: no-repeat
+        background-position: -112px -4px
+    &__insta
+        width: 25px
+        height: 25px
+        background-repeat: no-repeat
+        background-position: -169px -4px
+.underfooter
+    height: 81px
+    background-color: #31293c
+    display: flex
+    justify-content: center
+    align-items: center
+    @media screen and ( max-width: 576px )
+        height: 50px
+        
+    &__text
+        font-size: 16px
+        color: $white
+        @media screen and ( max-width: 576px )
+            font-size: 12px
+            

@@ -1,0 +1,95 @@
+.hero
+    width: 100%
+    background-color: $bg-grey
+    position: relative
+    @media screen and ( max-width: 1024px )
+        background-image: url(../img/Ellipse_1_1024.svg)
+        background-position: right  bottom
+        background-repeat: no-repeat
+    @media screen and ( max-width: 576px )
+        background-image: none
+        
+        
+    &__bg-figure
+        position: absolute
+        bottom: 0
+        right: 0
+        z-index: 0
+        @media screen and ( max-width: 1024px )
+            display: none
+            
+    &__container
+        display: flex
+        justify-content: space-between
+        z-index: 1   
+        @media screen and ( max-width: 1024px )
+            overflow-x: hidden
+        @media screen and ( max-width: 576px )
+            flex-direction: column
+            align-items: center            
+            
+    &__content
+        flex-direction: column
+        padding-top: 219px
+        z-index: 10 
+        @media screen and ( max-width: 768px )
+            padding-top: 110px
+        @media screen and ( max-width: 576px )
+            padding-top: 0
+            margin-top: 18px
+            text-align: center
+                  
+            
+    &__title
+        font-size: 73px
+        @media screen and ( max-width: 1220px )
+            font-size: 42px
+        @media screen and ( max-width: 935px )
+            font-size: 35px
+        @media screen and ( max-width: 768px )
+            font-size: 50px
+        @media screen and ( max-width: 576px )
+            font-size: 30px
+        @media screen and ( max-width: 340px )
+            font-size: 26px
+    &__subtitle
+        display: block
+        color: #8993ad
+        font-size: 25px
+        font-weight: 400
+        margin-top: 22px
+        margin-bottom: 14px 
+        @media screen and ( max-width: 996px )
+            font-size: 20px
+        @media screen and ( max-width: 900px )
+            font-size: 16px
+        @media screen and ( max-width: 768px )
+            margin-bottom: 40px
+    &__foto
+        padding-top: 27px
+        z-index: 10
+        @media screen and ( max-width: 576px )
+            order: -1
+            width: 120%
+            text-align: center
+            background-image: url(../img/Ellipse_1_1024.svg)
+            background-repeat: no-repeat
+            background-position: right bottom
+            background-size: auto 100%
+            
+        @media screen and ( max-width: 370px )
+            background-image: url(../img/bg_320.svg)
+            background-size: 100% auto
+            
+    &__picture
+        margin-right: -81px
+        @media screen and ( max-width: 1335px )
+            margin-right: 0
+        @media screen and ( max-width: 865px )
+            margin-right: -70px
+        @media screen and ( max-width: 795px )
+            margin-right: -97px
+        > img
+            margin-bottom: -4px
+        @media screen and ( max-width: 576px )
+            margin-right: 0

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Александр Михайлё, frontend developer</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/main.min.css">
+	
+</head>
+<body>
+
+	@@include('_popup.html')
+	@@include('_header.html')
+	
+	<main class="main">
+		@@include('_hero.html')
+		@@include('_skills.html')
+		@@include('_portfolio.html')
+		@@include('_price.html')		
+	</main>
+	@@include('_footer.html')	
+	
+	
+	<script src="js/main.min.js"></script>
+
+	
+
+	<!-- Initialize Swiper -->
+	<script>
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		slidesPerGroup: 1,
+		loop: true,
+		
+		pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		},
+		navigation: {
+		nextEl: '.slider__arrow_right',
+		prevEl: '.slider__arrow_left',
+		},
+		breakpoints: {
+			850: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			},
+
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			}
+		},
+		
+	});
+
+	
+	</script>
+</body>
+
+</html>

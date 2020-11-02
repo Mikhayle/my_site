@@ -1,0 +1,104 @@
+.portfolio
+    background-color: $bg-grey    
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center  
+        position: relative 
+        text-align: center           
+    &__title
+        margin-top: 89px
+        @media screen and ( max-width: 576px )
+            margin-top: 100px
+    &__btn-main
+        margin-bottom: 102px
+        @media screen and ( max-width: 576px )
+            margin-bottom: 45px
+            
+.swiper
+    &-container
+        width: 100%
+        height: 445px
+        margin: 102px auto 0
+        @media screen and ( max-width: 576px )
+            margin: 43px auto 0 
+            height: 410px
+                  
+    &-pagination
+        display: none
+        @media screen and ( max-width: 1024px )
+            display: block
+            
+    &-pagination-bullet 
+        width: 12px !important
+        height: 12px !important	
+        @media screen and ( max-width: 576px )
+            width: 10px !important
+            height: 10px !important	
+            margin: 0 15px !important
+        
+    &-pagination-bullets
+        bottom: 28px !important	
+        @media screen and ( max-width: 576px )
+            bottom: 45px !important	
+    &-pagination-bullet-active 
+        background: linear-gradient(13deg, #ff8f5a, #ff2f96) !important
+		
+    &-slide         
+        text-align: center
+        font-size: 18px
+        background: #fbfbfb   
+        /* Center slide text vertically */
+        display: -webkit-box
+        display: -ms-flexbox
+        display: -webkit-flex
+        display: flex
+        -webkit-box-pack: center
+        -ms-flex-pack: center
+        -webkit-justify-content: center
+        justify-content: center
+        
+            
+        
+
+.slider
+    &__arrow
+        background: none
+        border: none
+        cursor: pointer
+        position: absolute
+        z-index: 10
+        top: 372px
+        border-radius: 50%
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08)
+        &:active
+            box-shadow: 0 0 20px  rgba(0, 0, 0, 0.08) inset	
+        @media screen and ( max-width: 1024px )
+            display: none
+
+    &__arrow_left 
+        left: -3px
+        @media screen and ( max-width: 1200px )
+            left: 75px       
+        @media screen and ( max-width: 1095px )
+            left: 60px
+		
+    &__arrow_right 
+        right: -3px
+        @media screen and ( max-width: 1200px )
+            right: 75px
+        @media screen and ( max-width: 1095px )
+            right: 60px
+            
+    
+    &__text 	
+        padding-top: 35px
+        color: #8993ad
+        font-size: 20px
+        font-weight: 500
+        @media screen and ( max-width: 576px )
+            font-size: 18px
+            
+		
+
+		
